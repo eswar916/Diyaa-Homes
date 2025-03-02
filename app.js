@@ -26,15 +26,15 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
-app.post("/lux", (req, res) => {
+app.get("/lux", (req, res) => {
     res.render("ind", { data: format1.home1 });
 });
 
-app.post("/mod", (req, res) => {
+app.get("/mod", (req, res) => {
     res.render("ind", { data: format1.home2 });
 });
 
-app.post("/ren", (req, res) => {
+app.get("/ren", (req, res) => {
     res.render("ind", { data: format1.home3 });
 });
 
