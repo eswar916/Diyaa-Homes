@@ -74,6 +74,8 @@ nav a:hover {
     margin-top: 70px; 
 }
 
+
+
 .carousel-item img {
     height: 80vh;
     object-fit: cover;
@@ -403,12 +405,12 @@ footer {
     background-color: #FFFFFF;
 }
 
-.phone-input {
+.phone-input1 {
     display: flex;
     gap: 10px;
 }
 
-.phone-input select {
+.phone-input1 select {
     width: 100px;
 }
 
@@ -425,6 +427,136 @@ footer {
 }
 
 .contact-form button:hover {
+    background-color: #EFCB68;
+    color: #160C28;
+}
+
+
+input, select, button {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.phone-input {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.phone-input select {
+    flex: 0 0 90px;
+    height: 50px;  
+    padding: 6px 8px;
+}
+
+.phone-input input {
+    flex: 1;
+}
+
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin: 5px 0 10px;
+}
+
+#diyadiv {
+    transition: opacity 0.5s ease;
+}
+
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    background-color: #E1EFE6;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #EFCB68;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+
+
+#popup.closing {
+    animation: slideOutToRight 0.5s ease-in forwards;
+}
+
+#popup h3 {
+    margin: 0 0 10px;
+    color: #160C28;
+    font-family: "DM Serif Display", serif;
+    text-align: left;
+}
+
+#popup p {
+    margin: 0 0 20px;
+    color: #160C28;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+#popup label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #160C28;
+}
+
+#popup input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #EFCB68;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+}
+
+#popup button {
+    background-color: #160C28;
+    color: #E1EFE6;
+    border: 2px solid #EFCB68;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#popup button:hover {
     background-color: #EFCB68;
     color: #160C28;
 }
@@ -478,8 +610,6 @@ footer {
     .about-content{
         flex-direction: column;
     }
-    
-    
     
     #about h2, #about h3 {
         text-align: center;
